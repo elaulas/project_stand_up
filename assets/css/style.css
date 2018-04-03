@@ -8,6 +8,7 @@
 }
 
 
+
 .jumboItems {
     background-color: rgb(255, 255, 255,.5);
     width: fit-content;
@@ -22,7 +23,11 @@
 
 .signIn {
     float: right;
-    margin-top: -39px;
+    margin-top: -30px;
+}
+.signIn:hover {
+    background-color: white;
+    color: blue;
 }
 
 .captionMain {

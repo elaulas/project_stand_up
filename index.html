@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding: 25px 0px 25px 0px">
     <a class="navbar-brand" href="#">
       <img src="assets/images/psu-logo.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Project Stand-Up
     </a>
@@ -44,56 +44,56 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a href="">
-          <button type="text" class="btn btn-outline-primary signUp">Sign Up</button>
-        </a>
+        <a href="">Sign Up</a>
 
         <!-- Sign in Button -->
         <div class="container">
-            <p class="text-center">
-              <a href="#" class="btn btn-primary signIn" role="button" data-toggle="modal" data-target="#login-modal">Sign In</a>
-            </p>
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header" align="center">
-                <img class="img-circle" id="img_logo" src=assets/images/psu-logo.svg style="margin:auto; padding: 0px">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                </button>
-              </div>
+          <p class="text-center">
+            <a href="#" class="btn btn-primary signIn" role="button" data-toggle="modal" data-target="#login-modal">Sign In</a>
+          </p>
+          <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header" align="center">
+                  <img class="img-circle" id="img_logo" src=assets/images/psu-logo.svg style="margin:auto; padding: 0px">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                  </button>
+                </div>
 
-              <!-- Begin # DIV Form -->
-              <div id="div-forms">
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
 
-                <!-- Begin # Login Form -->
-                <form id="login-form">
-                  <div class="modal-body">
-                    <div id="div-login-msg">
-                      <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
-                      <span id="text-login-msg">LOG IN</span>
+                  <!-- Begin # Login Form -->
+                  <form id="login-form">
+                    <div class="modal-body">
+                      <div id="div-login-msg">
+                        <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                        <span id="text-login-msg">LOG IN</span>
+                      </div>
+                      <input id="login_username" class="form-control" type="text" placeholder="Username" required style="width: 100%">
+                      <input id="login_password" class="form-control" type="password" placeholder="Password" required style="width: 100%">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox"> Remember me
+                        </label>
+                      </div>
                     </div>
-                    <input id="login_username" class="form-control" type="text" placeholder="Username" required style="width: 100%">
-                    <input id="login_password" class="form-control" type="password" placeholder="Password" required style="width: 100%">
-                    <div class="checkbox">
-                      <label>
-                        <input type="checkbox"> Remember me
-                      </label>
+                    <div class="modal-footer">
+                      <div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                      </div>
+                      <div>
+                        <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                        <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                      </div>
                     </div>
-                  </div>
-                  <div class="modal-footer">
-                    <div>
-                      <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
-                    </div>
-                    <div>
-                      <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
-                      <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
-                    </div>
-                  </div>
-                </form>
-                <!-- End # Login Form -->
+                  </form>
+                  <!-- End # Login Form -->
 
-    </div>
+                </div>
+
+                
   </nav>
   <div class="jumbotron">
 
@@ -111,34 +111,8 @@
 
     </div>
   </div>
-  <div class="row captionMain">
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <img class="card-img-top" src="..." alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
 
   </div>
-</div>
 
 
 
