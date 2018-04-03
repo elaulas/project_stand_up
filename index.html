@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Project Stand-Up</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Project Stand-Up</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+
 
 </head>
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
-      <img src="assets/images/psu-logo.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Project Stand-Up
+      <img src="assets/images/psu-logo.svg" width="30" height="30" class="d-inline-block align-top" alt=""> Project Stand-Up
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
             Contact Us
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -37,34 +44,181 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-          <a href=""><button type="text" class="btn btn-outline-primary signUp">Sign Up</button></a>
-        <a href="#">Log In</a>
+        <a href="">
+          <button type="text" class="btn btn-outline-primary signUp">Sign Up</button>
+        </a>
+
+        <!-- Sign in Button -->
+        <div class="container">
+            <p class="text-center">
+              <a href="#" class="btn btn-primary signIn" role="button" data-toggle="modal" data-target="#login-modal">Sign In</a>
+            </p>
+        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" align="center">
+                <img class="img-circle" id="img_logo" src=assets/images/psu-logo.svg style="margin:auto; padding: 0px">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </button>
+              </div>
+
+              <!-- Begin # DIV Form -->
+              <div id="div-forms">
+
+                <!-- Begin # Login Form -->
+                <form id="login-form">
+                  <div class="modal-body">
+                    <div id="div-login-msg">
+                      <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                      <span id="text-login-msg">LOG IN</span>
+                    </div>
+                    <input id="login_username" class="form-control" type="text" placeholder="Username" required style="width: 100%">
+                    <input id="login_password" class="form-control" type="password" placeholder="Password" required style="width: 100%">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> Remember me
+                      </label>
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <div>
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                    </div>
+                    <div>
+                      <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                      <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                    </div>
+                  </div>
+                </form>
+                <!-- End # Login Form -->
+
+                <!-- Begin | Lost Password Form -->
+                <form id="lost-form" style="display:none;">
+                  <div class="modal-body">
+                    <div id="div-lost-msg">
+                      <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                      <span id="text-lost-msg">Type your e-mail.</span>
+                    </div>
+                    <input id="lost_email" class="form-control" type="text" placeholder="E-Mail (type ERROR for error effect)" required>
+                  </div>
+                  <div class="modal-footer">
+                    <div>
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                    </div>
+                    <div>
+                      <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                      <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                    </div>
+                  </div>
+                </form>
+                <!-- End | Lost Password Form -->
+
+                <!-- Begin | Register Form -->
+                <form id="register-form" style="display:none;">
+                  <div class="modal-body">
+                    <div id="div-register-msg">
+                      <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                      <span id="text-register-msg">Register an account.</span>
+                    </div>
+                    <input id="register_username" class="form-control" type="text" placeholder="Username (type ERROR for error effect)" required>
+                    <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                    <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                  </div>
+                  <div class="modal-footer">
+                    <div>
+                      <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                    </div>
+                    <div>
+                      <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                      <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                    </div>
+                  </div>
+                </form>
+                <!-- End | Register Form -->
+
+              </div>
+              <!-- End # DIV Form -->
+
+            </div>
+          </div>
+        </div>
+
       </form>
     </div>
-</nav>
-<div class="jumbotron">
-  
-    <h1 class="display-4"style="font-size: 75pt; font-weight: bolder; text-align:left;" >TIME TO STAND UP!</h1>
+  </nav>
+  <div class="jumbotron">
+
+    <h1 class="display-4" style="font-size: 75pt; font-weight: bolder; text-align:center;">TIME TO STAND UP!</h1>
     <div class="jumboItems container">
-    <img src="assets/images/psu-logo.svg" alt="Project Stand-Up" style width="500px; text-align: center">
-    <br><br><br>
-    <hr class="my-4">
-    <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+      <img src="assets/images/psu-logo.svg" alt="Project Stand-Up" style width="500px; text-align: center">
+      <br>
+      <br>
+      <br>
+      <hr class="my-4">
+      <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+
+    </div>
   </div>
+  <div class="row captionMain">
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="..." alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
   </div>
-    
-    
-    
-    
-    
-    
 </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
-    <script src="assets/javascript/app.js"></script> 
+
+
+
+
+
+
+
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    // TODO: Replace with your project's customized code snippet
+    var config = {
+      apiKey: "AIzaSyClZIxwkLsAy_fmh7WzottuMHKj7tiWg8I",
+      authDomain: "project-stand-up.firebaseapp.com",
+      databaseURL: "https://project-stand-up.firebaseio.com",
+      // storageBucket: "<BUCKET>.appspot.com",
+      // messagingSenderId: "<SENDER_ID>",
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="assets/javascript/app.js"></script>
 </body>
+
 </html>
